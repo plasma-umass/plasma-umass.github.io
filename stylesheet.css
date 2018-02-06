@@ -1,0 +1,304 @@
+/* Start of CMSMS style sheet 'Simple Layout' */
+/*****************
+browsers interpret margin and padding a little differently, 
+we'll remove all default padding and margins and
+set them later on
+******************/
+* {
+margin:0;
+padding:0;
+}
+
+/*
+Set initial font styles
+*/
+body {
+   text-align: left;
+   font-family: Verdana, Helvetica, Arial, sans-serif;
+   font-size: 12px
+   line-height: 1em;
+}
+
+/*
+set font size for all divs,
+this overrides some body rules
+*/
+div {
+   font-size: 12px;
+}
+
+/*
+if img is inside "a" it would have 
+borders, we don't want that
+*/
+img {
+   border: 0;
+}
+
+/*
+default link styles
+*/
+/* set all links to have underline and bluish color */
+a,
+a:link, 
+a:active,
+a:visited {
+   text-decoration: none;
+/* css validation will give a warning if color is set without background color. this will explicitly tell this element to inherit bg colour from parent element */
+   background-color: inherit; 
+   color: darkblue;
+}
+
+a:hover {
+   text-decoration: underline;
+   background-color: inherit;
+   color: darkred;
+}
+
+/*****************
+basic layout 
+*****************/
+body {
+   background-color: #ccc;
+   color: #333;
+   margin:1em;    /* gives some air for the pagewrapper */
+}
+
+/* center wrapper, min max width */
+div#pagewrapper {
+   border: 1px solid black;
+   margin: 0 auto;       /* this centers wrapper */
+   max-width: 80em;   /* IE wont understand these, so we will use javascript magick */
+   min-width: 60em;
+   background-color: #fff;
+   color: black;
+}
+
+
+/*** header ***
+we will hide text and replace it with a image
+we need to assign a height for it so that the image wont cut off
+*/
+div#header {
+   height: 170px;    /* adjust according your image size */
+   background: white;           
+}
+
+div#header h1 a {
+/* you can set your own image here */
+   background: url(http://www.cs.umass.edu/~emery/emery-banner.jpg) no-repeat 0 12px; 
+   display: block;
+   height: 170px;             /* adjust according your image size */
+   text-indent: -999em;  /* this hides the text */
+   text-decoration:none; /* old firefox would have shown underline for the link, this explicitly hides it */
+}
+
+/* position for the search box */
+div#search {
+   float: right;
+   width: 23em;    /* enough width for the search input box */
+   text-align: right;
+   padding: 0.6em 0 0.2em 0;
+   margin: 0 1em;
+}
+
+div.breadcrumbs {
+   padding: 1em 0 1.2em 0; /* CSS short hand rule first value is top then right, bottom and left */
+   font-size: 90%;        /* its good to set fontsizes to be relative, this way viewer can change his/her fontsize */
+   margin: 0 1em;        /* css shorthand rule will be opened to be "0 1em 0 1em" */
+   border-bottom: 1px dotted #000;
+}
+
+div#content {
+   margin: 1.5em auto 2em 0;   /* some air above and under menu and content */
+}
+
+
+div#main {
+   margin-left: 2%; 
+   margin-right: 2%; /* and some air on the right */
+}
+
+div#sidebar {
+   float: left;        /* set sidebar on the left side. Change to right to float it right instead. */
+   width: 26%;     /* sidebar width, if you change this please also change #main margins */
+   display: inline;  /* FIX IE double margin bug */
+   margin-left: 0;
+}
+
+div#footer {
+   clear: both;       /* keep footer below content and menu */
+   color: #fff;
+   background-color: rgb(136, 17, 17); /* same bg color as in header */
+}
+
+div#footer p {
+   font-size: 0.8em;
+   padding: 1.5em;       /* some air for footer */
+   text-align: center;  /* centered text */
+   margin: 0;
+}
+
+div#footer p a {
+   color: #fff; /* needed becouse footer link would be same color as background otherwise */
+}
+
+/* as we hid all hr for accessibility we create new hr with extra div element */
+div.hr {
+   height: 1px;
+   padding: 1em;
+   border-bottom: 1px dotted black;
+   margin: 1em;
+}
+
+/* relational links under content */
+div.left49 {
+  width: 49%; /* 50% for both left and right might lead to rounding error on some browser */
+}
+
+div.right49 {
+  float: right;
+  width: 49%;
+  text-align: right;
+}
+
+
+
+
+/********************
+CONTENT STYLING
+*********************/
+div#content {
+
+}
+
+/* HEADINGS */
+div#content h1 {
+   font-size: 2em; /* font size for h1 */
+   line-height: 1em;
+   margin: 0;
+}
+div#content h2 {
+	color: black; 
+	font-size: 1.5em; 
+	text-align: left; 
+/* some air around the text */
+	padding-left: 0.5em;
+	padding-bottom: 1px;
+/* set borders around header */
+	border-bottom: 1px solid black; 
+	border-left: 1.1em solid black; 
+        line-height: 1.5em;
+/* and some air under the border */
+        margin: 0 0 0.5em 0;
+}
+div#content h3 {
+   color: black; 
+   font-size: 1.3em;
+   line-height: 1.3em;
+   margin: 0 0 0.5em 0;
+}
+div#content h4 {
+   color: black; 
+   font-size: 1.2em;
+   line-height: 1.3em;
+   margin: 0 0 0.25em 0;
+}
+div#content h5 {
+   color: black; 
+   font-size: 1.1em;
+   line-height: 1.3em;
+   margin: 0 0 0.25em 0;
+}
+h6 {
+   color: black; 
+   font-size: 1em;
+   line-height: 1.3em;
+   margin: 0 0 0.25em 0;
+}
+/* END HEADINGS */
+
+/* TEXT */
+p {
+   font-size: 1em;
+   margin: 0 0 1.5em 0; /* some air around p elements */
+   line-height: 1.4em;
+   padding: 0;
+}
+
+blockquote {
+   border-left: 10px solid #ddd;
+   margin-left: 10px;
+}
+strong, b {
+/* explicit setting for these */
+   font-weight: bold;
+}
+em, i {
+/* explicit setting for these */
+   font-style:italic;
+}
+
+/* Wrapping text in <code> tags. Makes CSS not validate */
+code, pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+ font-family: "Courier New", Courier, monospace;
+ font-size: 1em;
+}
+
+pre {
+   border: 1px solid #000;  /* black border for pre blocks */
+   background-color: #ddd;
+   margin: 0 1em 1em 1em;
+   padding: 0.5em;
+   line-height: 1.5em;
+   font-size: 90%;
+
+
+}
+
+/* Separating the divs on the template explanation page, with some bottom-border */
+div.templatecode {
+  margin: 0 0 2.5em;
+}
+
+/* END TEXT */
+
+/* LISTS */
+/* lists in content need some margins to look nice */
+div#main ul,
+div#main ol,
+div#main dl {
+   font-size: 1.0em;
+   line-height: 1.4em;
+   margin: 0 0 1.5em 0;
+}
+
+div#main ul li,
+div#main ol li {
+   margin: 0 0 0.25em 3em;
+}
+
+/* definition lists topics on bold */
+div#main dl dt {
+   font-weight: bold;
+   margin: 0 0 0 1em;
+}
+div#main dl dd {
+   margin: 0 0 1em 1em;
+}
+
+div#main dl {
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+
+/* END LISTS */
+/* End of 'Simple Layout' */
+
