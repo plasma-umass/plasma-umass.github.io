@@ -34,6 +34,19 @@
 	  -moz-column-gap: 2em;
 	  column-gap: 2em;
       }
+      .conf {
+	  font-weight: bold;
+	  color: gray;
+      }
+      tr {
+	  break-after: column;
+	  break-inside: avoid;
+	  break-before: column;
+      }
+      .award {
+	  font-weight: bold;
+	  color: red;
+      }
     </style>
 
     <!-- Place this tag in your head or just before your close body tag. -->
@@ -574,7 +587,7 @@
 			      <table>
 				<tr>
 				  <td>
-				  <b>[UIST 2019]<b><br />
+				    <span class="conf">[UIST 2019]<span><br />
 				    <strong><a href="http://tea-lang.org/index_files/tea_UIST2019.pdf">Tea: A High-level Language and Runtime System for Automating Statistical Analysis</a></strong>
 				    (<em><a href="http://tea-lang.org/index_files/tea_UIST2019.pdf">pdf</a></em>)
 				  </td>
@@ -584,7 +597,7 @@
 			      <table>
 				<tr>
 				  <td>
-				  <b>[PLDI 2019]</b><br />
+				  <span class="conf">[PLDI 2019]</span><br />
 				  <strong><a href="https://arxiv.org/pdf/1902.04738.pdf">Mesh: Compacting Memory Management for C/C++ Applications</a></strong>
 				  (<em><a href="https://arxiv.org/pdf/1902.04738.pdf">pdf</a></em>)
 				  </td>
@@ -594,7 +607,7 @@
 			      <table>
 				<tr>
 				  <td>
-				    <b>[OOPSLA 2018]</b><br />
+				    <span class="conf">[OOPSLA 2018]</span><br />
 				    <strong><a href="https://arxiv.org/pdf/1901.11100.pdf">ExceLint: automatically finding spreadsheet formula errors</a></strong>
 				    (<em><a href="https://arxiv.org/pdf/1901.11100.pdf">pdf</a></em>)
 				  </td>
@@ -604,9 +617,9 @@
 			      <table>
 				<tr>
 				  <td>
-				    <b>[PLDI 2018]</b><br />
+				    <span class="conf">[PLDI 2018]</span><br />
 				    <strong><a href="https://jvilk.com/assets/pdf/bleak.pdf">BLeak: Automatically Debugging Memory Leaks in Web Applications</a></strong>
-				    (<em><a href="https://jvilk.com/assets/pdf/bleak.pdf">pdf</a></em>, selected as <b>CACM Research Highlight</b>)
+				    (<em><a href="https://jvilk.com/assets/pdf/bleak.pdf">pdf</a></em>, selected as <span class="award">CACM Research Highlight</span>)
 				  </td>
 				</tr>
 			      </table>
@@ -614,9 +627,9 @@
 			      <table>
 				<tr>
 				  <td>
-				    <b><a href="http://esec-fse17.uni-paderborn.de/">[ESEC/FSE 2017]</a></b><br />
+				    <a href="http://esec-fse17.uni-paderborn.de/"><span class="conf">[ESEC/FSE 2017]</span></a><br />
 				    <strong><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Galhotra17fse.pdf">Fairness Testing: Testing Software for Discrimination</a></strong>
-				    (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Galhotra17fse.pdf">pdf</a></em>, <b>ACM SIGSOFT Distinguished Paper Award</b>)
+				    (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Galhotra17fse.pdf">pdf</a></em>, <span class="award">ACM SIGSOFT Distinguished Paper Award</span>)
 				  </td>
 				</tr>
 			      </table>
@@ -624,7 +637,7 @@
 			      <table>
 				<tr>
 				  <td>
-				    <b><a href="http://ieeexplore.ieee.org/servlet/opac?punumber=6221021">[IEEE SMC]</a></b><br />
+				    <a href="http://ieeexplore.ieee.org/servlet/opac?punumber=6221021"><span class="conf">[IEEE SMC]</span></a><br />
 				    <strong><a href="http://ieeexplore.ieee.org/document/7887737/?reload=true">Discrete-Event Simulation and Integer Linear Programming for Constraint-Aware Resource Scheduling</a></strong>
 				    (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Shin17tsmc.pdf">pdf</a></em>)
 				  </td>
@@ -634,10 +647,13 @@
 			      <table>
 				<tr>
 				  <td>
-				    <b>
-				      <a href="http://icsa-conferences.org/2017/">[ICSA 2017]</a></b><br />
+				    <a href="http://icsa-conferences.org/2017/">
+				      <span class="conf">
+					[ICSA 2017]
+				      </span>
+				  </a><br />
 				    <strong><a href="http://ieeexplore.ieee.org/document/7927986/">Continuous Analysis of Collaborative Design</a></strong>
-				    (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Bang17icsa.pdf">pdf</a></em>, <b>Best Paper Award</b>)
+				    (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Bang17icsa.pdf">pdf</a></em>, <span class="award">Best Paper Award</span>)
 				  </td>
 				</tr>
 				</table>
@@ -645,7 +661,7 @@
 			      <table>
 				<tr>
 				  <td>
-				    <b><a href="http://aster.or.jp/conference/icst2017/">[ICST 2017]</a></b><br />
+				    <a href="http://aster.or.jp/conference/icst2017/"><span class="conf">[ICST 2017]</span></a><br />
 				    <strong><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Wang17icst.pdf">Behavioral Execution Comparison: Are Tests Representative of Field Behavior?</a></strong>
 				    (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Wang17icst.pdf">pdf</a></em>)
 				  </td>
@@ -654,396 +670,477 @@
 				
 			      <table>
 				<tr>
-		    <td valign="top"><a href="https://chi2017.acm.org/">[CHI 2017]</a></td>
-		    <td valign="top">
-		      <strong><a href="https://dl.acm.org/citation.cfm?id=3026025">VoxPL: Programming with the Wisdom of the Crowd</a></strong>
-		      (<em><a href="https://people.cs.umass.edu/~emery/pubs/voxpl-chi.pdf">pdf</a></em>)
-		    </td>
-		  </tr>
+				  <td>
+				    <span class="conf"><a href="https://chi2017.acm.org/">[CHI 2017]</a></span><br />
+				    <strong><a href="https://dl.acm.org/citation.cfm?id=3026025">VoxPL: Programming with the Wisdom of the Crowd</a></strong>
+				    (<em><a href="https://people.cs.umass.edu/~emery/pubs/voxpl-chi.pdf">pdf</a></em>)
+				  </td>
+				</tr>
+			      </table>
 
-		  <tr>
-		    <td valign="top"><a href="http://novel.ict.ac.cn/ASPLOS2017/">[ASPLOS 2017]</a></td>
-		    <td valign="top">
-		      <strong><a href="https://arxiv.org/abs/1611.07862">Browsix: Bridging the Gap Between Unix and the Browser</a></strong><br />
-		      <em>see <a href="http://www.browsix.org/">browsix.org</a></em>
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td valign="top"><a href="http://2016.splashcon.org/track/splash-2016-oopsla">[OOPSLA 2016]</a></td>
-		    <td valign="top">
-		      <strong><a href="https://arxiv.org/abs/1610.04790">Prioritized garbage collection: explicit GC support for software caches</a></strong>
-		      (<em><a href="https://arxiv.org/pdf/1610.04790">pdf</a></em>)
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td valign="top"><a href="http://conf.researchr.org/home/pldi-2016">[PLDI 2016]</a></td>
-		    <td valign="top">
-		      <strong><a href="https://dl.acm.org/citation.cfm?id=2908083">Rehearsal: A Configuration Verification Tool for Puppet</a></strong>
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td valign="top"><a href="http://2016.icse.cs.txstate.edu/">[ICSE 2016]</a></td>
-		    <td valign="top">
-		      <strong><a href="https://dl.acm.org/citation.cfm?id=2884784">DoubleTake: Fast and Precise Error Detection via Evidence-Based Dynamic
-			  Analysis</a></strong>
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td valign="top"><a href="http://issre.net/">[ISSRE 2015]</a></td>
-		    <td valign="top">
-		      <strong><a href="http://ieeexplore.ieee.org/document/7381842/">Discovering Specification Violations in Networked Software Systems</a></strong>
-		      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Walls15issre.pdf">pdf</a></em>)
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td valign="top"><a href="http://issre.net/">[ISSRE 2015]</a></td>
-		    <td valign="top">
-		      <strong><a href="http://ieeexplore.ieee.org/document/7381841/">Detecting Latent Cross-Platform API Violations</a></strong>
-		      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Rasley15issre.pdf">pdf</a></em>)
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td valign="top"><a href="http://icfpconference.org/icfp2015/">[ICFP 2015]</a></td>
-		    <td valign="top">
-		      <strong><a href="http://arxiv.org/abs/1506.06378">A Fast Compiler for NetKAT</a></strong>
-		      (<em><a href="https://arxiv.org/pdf/1506.06378">pdf</a></em>)
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td valign="top"><a href="http://ase2015.unl.edu/">[ASE 2015]</a></td>
-		    <td valign="top">
-		      <strong><a href="https://dl.acm.org/citation.cfm?id=2916260">Repairing Programs with Semantic Code Search</a></strong>
-		      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Ke15ase.pdf">pdf</a></em>)
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td valign="top"><a href="http://www.ssrc.ucsc.edu/sosp15/">[SOSP 2015]</a></td>
-		    <td valign="top">
-		      <strong><a href="http://sigops.org/sosp/sosp15/current/2015-Monterey/090-curtsinger-online.pdf">Coz: Finding Code that Counts with Causal Profiling</a></strong>
-		      (<em><a href="http://sigops.org/sosp/sosp15/current/2015-Monterey/090-curtsinger-online.pdf">pdf</a></em>, <b>Best Paper Award</b>)
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td valign="top"><a href="http://esec-fse15.dei.polimi.it/">[ESEC/FSE 2015]</a></td>
-		    <td valign="top">
-		      <strong><a href="http://dx.doi.org/10.1145/2786805.2786825">Is the Cure Worse than the Disease? Overfitting in Automated Program Repair</a></strong>
-		      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Smith15fse.pdf">pdf</a></em>)
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td valign="top"><a href="http://issta2015.cs.uoregon.edu/">[ISSTA 2015]</a></td>
-		    <td valign="top">
-		      <strong><a href="http://dx.doi.org/10.1145/2771783.2771792">Preventing Data Errors with Continuous Testing</a></strong>
-		      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Muslu15issta.pdf">pdf</a></em>)
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td valign="top"><a href="http://www.computer.org/portal/web/tse">[IEEE TSE]</a></td>
-		    <td valign="top">
-		      <strong><a href="http://dx.doi.org/10.1109/TSE.2015.2412134">Self-Adapting Reliability in Distributed Software Systems</a></strong>
-		      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Brun15tse.pdf">pdf</a></em>)
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td valign="top"><a href="http://www.computer.org/portal/web/tse">[IEEE TSE]</a></td>
-		    <td valign="top">
-		      <strong><a href="http://dx.doi.org/10.1109/TSE.2015.2417161">Reducing feedback delay of software development tools via continuous analyses</a></strong>
-		      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Muslu15tse.pdf">pdf</a></em>)
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td valign="top"><a href="http://www.computer.org/portal/web/tse">[IEEE TSE]</a></td>
-		    <td valign="top">
-		      <strong><a href="http://dx.doi.org/10.1109/TSE.2014.2369047">Using declarative specification to improve the understanding,
-			  extensibility, and comparison of model-inference algorithms</a></strong>
-		      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Beschastnikh15tse.pdf">pdf</a></em>)
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td valign="top"><a href="http://2014.splashcon.org/track/oopsla2014">[OOPSLA 2014]</a></td>
-		    <td valign="top">
-		      <strong><a href="https://dl.acm.org/citation.cfm?doid=2660193.2660206"><span style="font-variant: small-caps;">SurveyMan</span>: Programming and Automatically Debugging Surveys</a> <b>(Best Paper Award)</b></strong>
-		      (<em><a href="http://www.cs.umass.edu/~emery/pubs/SurveyMan-OOPSLA2014.pdf">pdf</a></em>)<br />
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td valign="top"><a href="http://2014.splashcon.org/track/oopsla2014">[OOPSLA 2014]</a></td>
-		    <td valign="top">
-		      <strong><a href="https://dl.acm.org/citation.cfm?doid=2660193.2660207"><span style="font-variant: small-caps;">CheckCell</span>: Data Debugging for Spreadsheets</a></strong>
-		      (<em><a href="http://www.cs.umass.edu/~emery/pubs/CheckCell-preprint-OOPSLA2014.pdf">pdf</a></em>)<br />
-		    </td>
-		  </tr>
+			      <table>
+				<tr>
+				  <td>
+				    <span class="conf"><a href="http://novel.ict.ac.cn/ASPLOS2017/">[ASPLOS 2017]</a></span><br />
+				    <strong><a href="https://arxiv.org/abs/1611.07862">Browsix: Bridging the Gap Between Unix and the Browser</a></strong><br />
+				    <em>see <a href="http://www.browsix.org/">browsix.org</a></em>
+				  </td>
+				</tr>
+			      </table>
+			      
+			      <table>
+				<tr>
+				  <td>
+				    <span class="conf"><a href="http://2016.splashcon.org/track/splash-2016-oopsla">[OOPSLA 2016]</a></span><br />
+				    <strong><a href="https://arxiv.org/abs/1610.04790">Prioritized garbage collection: explicit GC support for software caches</a></strong>
+				    (<em><a href="https://arxiv.org/pdf/1610.04790">pdf</a></em>)
+				  </td>
+				</tr>
+			      </table>
 
 
-
-		  <tr>
-		    <td valign="top"><a href="http://fse22.gatech.edu/">[FSE 2014]</a></td>
-		    <td valign="top">
-		      <strong><a href="http://dx.doi.org/10.1145/2635868.2635898">The Plastic Surgery Hypothesis</a></strong>
-		      (<em><a href="http://people.cs.umass.edu/brun/pubs/pubs/Barr14fse.pdf">pdf</a></em>)
-		    </td>
-		  </tr>
-
-
-		  <tr>
-		    <td valign="top"><a href="http://conferences.inf.ed.ac.uk/pldi2014/">[PLDI 2014]</a></td>
-		    <td valign="top">
-		      <strong><a href="http://dl.acm.org/citation.cfm?id=2594293"><span style="font-variant: small-caps;">Doppio</span>: Breaking the Browser Language Barrier</a></strong><br />
-		      <em>see <a href="http://www.doppiojvm.org/">doppiojvm.org</a></em>
-		    </td>
-		  </tr>
-
-		  <tr>
-		    <td valign="top"><a href="http://ase2014.org/">[ASE 2014]</a></td>
-		    <td valign="top">
-		      <strong><a href="http://dx.doi.org/10.1145/2642937.2642988">Behavioral Resource-Aware Model Inference</a></strong>
-		      (<em><a href="http://people.cs.umass.edu/brun/pubs/pubs/Ohmann14ase.pdf">pdf</a></em>)
-		    </td>
-		  </tr>
+			      <table>
+				<tr>
+				  <td>
+				    <span class="conf"><a href="http://conf.researchr.org/home/pldi-2016">[PLDI 2016]</a></span><br />
+				    <strong><a href="https://dl.acm.org/citation.cfm?id=2908083">Rehearsal: A Configuration Verification Tool for Puppet</a></strong>
+				  </td>
+				</tr>
+			      </table>
+			      
+			      <table>
+				<tr>
+				  <td>
+				    <span class="conf"><a href="http://2016.icse.cs.txstate.edu/">[ICSE 2016]</a><br />
+				      <strong><a href="https://dl.acm.org/citation.cfm?id=2884784">DoubleTake: Fast and Precise Error Detection via Evidence-Based Dynamic Analysis</a></strong>
+				    </td>
+				  </tr>
+				</table>
 
 
-		  <tr>
-		    <td valign="top"><a href="https://sites.google.com/site/ppopp2014/">[PPoPP 2014]</a></td>
-		    <td valign="top">
-		      <strong><a href="http://dl.acm.org/citation.cfm?doid=2555243.2555244"><span style="font-variant: small-caps;">Predator</span>: Predictive False Sharing Detection</a></strong><br />
-		    </td>
-		  </tr>
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf"><a href="http://issre.net/">[ISSRE 2015]</a></span>
+				      <strong><a href="http://ieeexplore.ieee.org/document/7381842/">Discovering Specification Violations in Networked Software Systems</a></strong>
+				      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Walls15issre.pdf">pdf</a></em>)
+				    </td>
+				  </tr>
+				</table>
 
-		  <tr>
-		    <td valign="top">[ASPLOS 2013]</td>
-		    <td valign="top">
-		      <strong><a href="http://www.cs.umass.edu/~emery/pubs/Stabilizer-UMass-CS-TR-2012-012.pdf"><span style="font-variant: small-caps;">Stabilizer</span>: Enabling Statistically Rigorous Performance Evaluation</a></strong> (draft version)<br />
-		      <em>see <a href="http://www.stabilizer-tool.org/">stabilizer-tool.org</a></em>
-		    </td>
-		  </tr>
+				<table>
+				  <tr>
+				    <td>
+				      <a href="http://issre.net/"><span class="conf">[ISSRE 2015]</span></a><br />
+				      <strong><a href="http://ieeexplore.ieee.org/document/7381841/">Detecting Latent Cross-Platform API Violations</a></strong>
+				      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Rasley15issre.pdf">pdf</a></em>)
+				    </td>
+				  </tr>
+				</table>
+				
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf"><a href="http://icfpconference.org/icfp2015/">[ICFP 2015]</a></span><br />
+				      <strong><a href="http://arxiv.org/abs/1506.06378">A Fast Compiler for NetKAT</a></strong>
+				      (<em><a href="https://arxiv.org/pdf/1506.06378">pdf</a></em>)
+				    </td>
+				  </tr>
+				</table>
 
-		  <tr>
-		    <td valign="top" width="120">[ICSE 2013]</td>
-		    <td valign="top">
-		      <strong><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Beschastnikh13icse.pdf">Unifying
-			  FSM-Inference Algorithms through Declarative Speciﬁcation</a></strong><br />
-		    </td>
-		  </tr>
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf"><a href="http://ase2015.unl.edu/">[ASE 2015]</a></span><br />
+				      <strong><a href="https://dl.acm.org/citation.cfm?id=2916260">Repairing Programs with Semantic Code Search</a></strong>
+				      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Ke15ase.pdf">pdf</a></em>)
+				    </td>
+				  </tr>
+				</table>
+				
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf"><a href="http://www.ssrc.ucsc.edu/sosp15/">[SOSP 2015]</a></span><br />
+				      <strong><a href="http://sigops.org/sosp/sosp15/current/2015-Monterey/090-curtsinger-online.pdf">Coz: Finding Code that Counts with Causal Profiling</a></strong>
+				      (<em><a href="http://sigops.org/sosp/sosp15/current/2015-Monterey/090-curtsinger-online.pdf">pdf</a></em>, <span class="award">Best Paper Award, CACM Research Highlight</span>)
+				    </td>
+				  </tr>
+				</table>
 
-		  <tr>
-		    <td valign="top" width="120">[ICCSP 2013]</td>
-		    <td valign="top">
-		      <strong><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Zhao13ICSSP.pdf">Supporting
-			  Process Undo and Redo in Software Engineering Decision Making</a></strong><br />
-		    </td>
-		  </tr>
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf"><a href="http://esec-fse15.dei.polimi.it/">[ESEC/FSE 2015]</a></span><br />
+				      <strong><a href="http://dx.doi.org/10.1145/2786805.2786825">Is the Cure Worse than the Disease? Overfitting in Automated Program Repair</a></strong>
+				      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Smith15fse.pdf">pdf</a></em>)
+				    </td>
+				  </tr>
+				</table>
 
-		  <tr>
-		    <td valign="top" width="120">[TDSC 2013]</td>
-		    <td valign="top">
-		      <strong><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Brun13tdsc.pdf">Entrusting
-			  Private Computation and Data to Untrusted Networks</a></strong><br />
-		    </td>
-		  </tr>
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf"><a href="http://issta2015.cs.uoregon.edu/">[ISSTA 2015]</a></span><br />
+				      <strong><a href="http://dx.doi.org/10.1145/2771783.2771792">Preventing Data Errors with Continuous Testing</a></strong>
+				      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Muslu15issta.pdf">pdf</a></em>)
+				    </td>
+				  </tr>
+				</table>
 
-		  <tr>
-		    <td valign="top" width="120">[OOPSLA 2012]</td>
-		    <td valign="top">
-		      <strong><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Muslu12oopsla.pdf">Speculative
-			  Analysis of Integrated Development Environment Recommendations</a></strong><br />
-		    </td>
-		  </tr>
+				<table>
+				  <tr>
+				    <td><a href="http://www.computer.org/portal/web/tse"><span class="conf">[IEEE TSE]</span></a><br />
+				      <strong><a href="http://dx.doi.org/10.1109/TSE.2015.2412134">Self-Adapting Reliability in Distributed Software Systems</a></strong>
+				      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Brun15tse.pdf">pdf</a></em>)
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <a href="http://www.computer.org/portal/web/tse"><span class="conf">[IEEE TSE]</span></a><br />
+				      <strong><a href="http://dx.doi.org/10.1109/TSE.2015.2417161">Reducing feedback delay of software development tools via continuous analyses</a></strong>
+				      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Muslu15tse.pdf">pdf</a></em>)
+				    </td>
+				  </tr>
+				</table>
+				
+
+				<table>
+				  <tr>
+				    <td><a href="http://www.computer.org/portal/web/tse"><span class="conf">[IEEE TSE]</span></a><br />
+				      <strong><a href="http://dx.doi.org/10.1109/TSE.2014.2369047">Using declarative specification to improve the understanding,
+					  extensibility, and comparison of model-inference algorithms</a></strong>
+				      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Beschastnikh15tse.pdf">pdf</a></em>)
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td><a href="http://2014.splashcon.org/track/oopsla2014"><span class="conf">[OOPSLA 2014]</span></a><br />
+				      <strong><a href="https://dl.acm.org/citation.cfm?doid=2660193.2660206"><span style="font-variant: small-caps;">SurveyMan</span>: Programming and Automatically Debugging Surveys</a> <span class="award">(Best Paper Award)</span></strong>
+				      (<em><a href="http://www.cs.umass.edu/~emery/pubs/SurveyMan-OOPSLA2014.pdf">pdf</a></em>)<br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <a href="http://2014.splashcon.org/track/oopsla2014">
+					<span class="conf">
+					  [OOPSLA 2014]
+					</span>
+				      </a>
+				    <br />
+				    <strong><a href="https://dl.acm.org/citation.cfm?doid=2660193.2660207"><span style="font-variant: small-caps;">CheckCell</span>: Data Debugging for Spreadsheets</a></strong>
+				    (<em><a href="http://www.cs.umass.edu/~emery/pubs/CheckCell-preprint-OOPSLA2014.pdf">pdf</a></em>)<br />
+				    </td>
+				  </tr>
+				</table>
 
 
-		  <tr>
-		    <td valign="top" width="120">[OOPSLA 2012]</td>
-		    <td valign="top">
-		      <strong><a href="http://www.cs.umass.edu/~emery/pubs/AutoMan-UMass-CS-TR-2012-013.pdf">AutoMan: A Platform for Integrating Human and Digital Computation</a></strong> (draft version)<br />
-		      <em>see <a href="http://www.automan-lang.org/">automan-lang.org</a></em>
-		    </td>
-		  </tr>
-		  <tr>
-		    <td valign="top">[ACM TECS 2012]</td>
-		    <td>
-		      <strong><a href="http://www.cs.umass.edu/~emery/pubs/PROARTIS-TECS.pdf">PROARTIS: Probabilistically Analysable Real-Time Systems</a></strong><br />
-		      <em>see <a href="http://www.proartis-project.eu/">proartis-project.eu</a></em>
-		    </td>
-		  </tr>
-		  <tr>
-		    <td valign="top">[SOSP 2011]</td>
-		    <td valign="top">
-		      <strong><a href="http://dl.acm.org/authorize?6599740"><span style="font-variant: small-caps;">Dthreads</span>: efficient deterministic multithreading</a></strong><br />
-		      <em>see <a href="http://www.dthreads.org/">dthreads.org</a></em>
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [OOPSLA 2011]
-		    </td>
-		    <td>
-		      <strong><a href="http://dl.acm.org/authorize?6594257"><span style="font-variant: small-caps;">Sheriff</span>: precise detection and automatic mitigation of false sharing</a></strong><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [CCS 2010]
-		    </td>
-		    <td>
-		      <strong><a href="http://dl.acm.org/authorize?394386">DieHarder: securing the heap</a></strong><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [ECRTS 2009]
-		    </td>
-		    <td>
-		      <strong><a href="http://www.cs.umass.edu/~emery/pubs/ecrts09.pdf">Using Randomized Caches in Real-Time Systems</a></strong><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [OOPSLA 2009]
-		    </td>
-		    <td>
-		      <strong><a href="http://dl.acm.org/authorize?148827">Grace: safe multithreaded programming for C/C++</strong></a><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [PLDI 2009]
-		    </td>
-		    <td>
-		      <strong><a href="http://dl.acm.org/authorize?185594">Efficiently and precisely locating memory leaks and bloat</a></strong><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [OSDI 2008]
-		    </td>
-		    <td>
-		      <strong><a href="http://www.cs.umass.edu/~emery/pubs/redline.pdf">Redline: first class support for interactivity in commodity operating systems</strong></a><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [ASPLOS-XIII]
-		    </td>
-		    <td>
-		      <strong><a href="http://dl.acm.org/authorize?058408">Archipelago: trading address space for reliability and security</a></strong><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [SenSys 2007]
-		    </td>
-		    <td>
-		      <strong><a href="http://dl.acm.org/authorize?924175">Eon: a language and runtime system for perpetual systems</a></strong><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [FAST 2007]
-		    </td>
-		    <td>
-		      <strong><a href="http://www.cs.umass.edu/~emery/pubs/TFS.pdf">TFS: a transparent file system for contributory storage</a></strong><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [PLDI 2007]
-		    </td>
-		    <td>
-		      <strong><a href="http://dl.acm.org/authorize?986689">Exterminator: automatically correcting memory errors with high probability</a></strong><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [PLDI 2006]
-		    </td>
-		    <td>
-		      <strong><a href="http://dl.acm.org/authorize?818704">DieHard: probabilistic memory safety for unsafe languages</a></strong><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [OSDI 2006]
-		    </td>
-		    <td>
-		      <strong><a href="http://www.cs.umass.edu/~emery/pubs/cramm.pdf">CRAMM: virtual memory support for garbage-collected applications</a></strong><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [USENIX 2006]
-		    </td>
-		    <td>
-		      <strong><a href="http://www.cs.umass.edu/~emery/pubs/tmm-usenix06.pdf">Transparent contribution of memory</a></strong><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [USENIX 2006]
-		    </td>
-		    <td>
-		      <strong><a href="http://www.cs.umass.edu/~emery/pubs/flux-usenix06.pdf">Flux: a language for programming high-performance servers</a></strong><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [OOPSLA 2005]
-		    </td>
-		    <td>
-		      <strong><a href="http://dl.acm.org/authorize?874044">
-			  Quantifying the performance of garbage collection vs. explicit memory management</a></strong><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [PLDI 2005]
-		    </td>
-		    <td>
-		      <strong><a href="http://dl.acm.org/authorize?861137">Garbage collection without paging</a></strong><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [OOPSLA 2002]
-		    </td>
-		    <td>
-		      <strong><a href="http://dl.acm.org/authorize?34140">Reconsidering custom memory allocation</a> (Most Influential Paper Award) </strong><br />
-		    </td>
-		  </tr>
-		  <tr>
-		    <td>
-		      [PLDI 2001]
-		    </td>
-		    <td>
-		      <strong><a href="http://dl.acm.org/authorize?675110">Composing high-performance memory allocators</a></strong><br />
-		      <em>see <a href="http://www.heaplayers.org/">HeapLayers.org</a></em>
-		    </td>
-		  </tr>
-		  <tr>
-		    <td valign="top">
-		      [ASPLOS-IX]
-		    </td>
-		    <td valign="top">
-		      <strong><a href="http://dl.acm.org/authorize?16188">Hoard: a scalable memory allocator for multithreaded applications</a></strong><br />
-		      <em>see <a href="http://www.hoard.org/">hoard.org</a></em>
-		    </td>
-		  </tr>
-		</table>
-	      </div>
-	      
+				<table>
+				  <tr>
+				    <td><a href="http://fse22.gatech.edu/"><span class="conf">[FSE 2014]</span></a><br />
+				      <strong><a href="http://dx.doi.org/10.1145/2635868.2635898">The Plastic Surgery Hypothesis</a></strong>
+				      (<em><a href="http://people.cs.umass.edu/brun/pubs/pubs/Barr14fse.pdf">pdf</a></em>)
+				    </td>
+				  </tr>
+				</table>
+
+
+				<table>
+				  <tr>
+				    <td><a href="http://conferences.inf.ed.ac.uk/pldi2014/"><span class="conf">[PLDI 2014]</span></a><br />
+				      <strong><a href="http://dl.acm.org/citation.cfm?id=2594293"><span style="font-variant: small-caps;">Doppio</span>: Breaking the Browser Language Barrier</a></strong><br />
+				      <em>see <a href="http://www.doppiojvm.org/">doppiojvm.org</a></em>
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <a href="http://ase2014.org/">
+					<span class="conf">
+					  [ASE 2014]
+					</span>
+				    </a><br />
+				      <strong><a href="http://dx.doi.org/10.1145/2642937.2642988">Behavioral Resource-Aware Model Inference</a></strong>
+				      (<em><a href="http://people.cs.umass.edu/brun/pubs/pubs/Ohmann14ase.pdf">pdf</a></em>)
+				    </td>
+				  </tr>
+				</table>
+				
+
+				<table>
+				  <tr>
+				    <td>
+				      <a href="https://sites.google.com/site/ppopp2014/"><span class="conf">[PPoPP 2014]</span></a><br />
+				      <strong><a href="http://dl.acm.org/citation.cfm?doid=2555243.2555244"><span style="font-variant: small-caps;">Predator</span>: Predictive False Sharing Detection</a></strong><br />
+				    </td>
+				  </tr>
+				</table>
+				
+				<table>
+				  <tr>
+				    <span class="conf">[ASPLOS 2013]</span><br />
+				      <strong><a href="http://www.cs.umass.edu/~emery/pubs/Stabilizer-UMass-CS-TR-2012-012.pdf"><span style="font-variant: small-caps;">Stabilizer</span>: Enabling Statistically Rigorous Performance Evaluation</a></strong> (draft version)<br />
+				      <em>see <a href="http://www.stabilizer-tool.org/">stabilizer-tool.org</a></em>
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <span class="conf">[ICSE 2013]</span><br />
+				      <strong><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Beschastnikh13icse.pdf">Unifying
+					  FSM-Inference Algorithms through Declarative Speciﬁcation</a></strong><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[ICCSP 2013]</span><br />
+				      <strong><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Zhao13ICSSP.pdf">Supporting
+					  Process Undo and Redo in Software Engineering Decision Making</a></strong><br />
+				    </td>
+				  </tr>
+				</table>
+				
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[TDSC 2013]</span><br />
+				      <strong><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Brun13tdsc.pdf">Entrusting
+					  Private Computation and Data to Untrusted Networks</a></strong><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[OOPSLA 2012]</span><br />
+				      <strong><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Muslu12oopsla.pdf">Speculative
+					  Analysis of Integrated Development Environment Recommendations</a></strong><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[OOPSLA 2012]</span><br />
+				    <strong><a href="http://www.cs.umass.edu/~emery/pubs/AutoMan-UMass-CS-TR-2012-013.pdf">AutoMan: A Platform for Integrating Human and Digital Computation</a></strong> <span class="award">(CACM Research Highlight)</span><br />
+				      <em>see <a href="http://www.automan-lang.org/">automan-lang.org</a></em>
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td><span class="conf">[ACM TECS 2012]</span><br />
+				      <strong><a href="http://www.cs.umass.edu/~emery/pubs/PROARTIS-TECS.pdf">PROARTIS: Probabilistically Analysable Real-Time Systems</a></strong><br />
+				      <em>see <a href="http://www.proartis-project.eu/">proartis-project.eu</a></em>
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[SOSP 2011]</span><br />
+				      <strong><a href="http://dl.acm.org/authorize?6599740"><span style="font-variant: small-caps;">Dthreads</span>: efficient deterministic multithreading</a></strong><br />
+				      <em>see <a href="http://www.dthreads.org/">dthreads.org</a></em>
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[OOPSLA 2011]</span><br />
+				      <strong><a href="http://dl.acm.org/authorize?6594257"><span style="font-variant: small-caps;">Sheriff</span>: precise detection and automatic mitigation of false sharing</a></strong><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[CCS 2010]</span><br />
+				      <strong><a href="http://dl.acm.org/authorize?394386">DieHarder: securing the heap</a></strong><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[ECRTS 2009]</span><br />
+				      <strong><a href="http://www.cs.umass.edu/~emery/pubs/ecrts09.pdf">Using Randomized Caches in Real-Time Systems</a></strong><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[OOPSLA 2009]</span><br />
+				      <strong><a href="http://dl.acm.org/authorize?148827">Grace: safe multithreaded programming for C/C++</strong></a><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[PLDI 2009]</span><br />
+				      <strong><a href="http://dl.acm.org/authorize?185594">Efficiently and precisely locating memory leaks and bloat</a></strong><br />
+				    </td>
+				  </tr>
+				</table>
+
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[OSDI 2008]</span><br />
+				      <strong><a href="http://www.cs.umass.edu/~emery/pubs/redline.pdf">Redline: first class support for interactivity in commodity operating systems</strong></a><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[ASPLOS-XIII]</span><br />
+				      <strong><a href="http://dl.acm.org/authorize?058408">Archipelago: trading address space for reliability and security</a></strong><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[SenSys 2007]</span><br />
+				      <strong><a href="http://dl.acm.org/authorize?924175">Eon: a language and runtime system for perpetual systems</a></strong><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[FAST 2007]</span><br />
+				      <strong><a href="http://www.cs.umass.edu/~emery/pubs/TFS.pdf">TFS: a transparent file system for contributory storage</a></strong> <span class="award">(Best Paper Award)</span><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[PLDI 2007]</span><br />
+				      <strong><a href="http://dl.acm.org/authorize?986689">Exterminator: automatically correcting memory errors with high probability</a></strong> <span class="award">(CACM Research Highlight)</span><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[PLDI 2006]</span><br />
+				      <strong><a href="http://dl.acm.org/authorize?818704">DieHard: probabilistic memory safety for unsafe languages</a></strong> <span class="award">(Most Influential Paper Award)</span><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[OSDI 2006]</span><br />
+				      <strong><a href="http://www.cs.umass.edu/~emery/pubs/cramm.pdf">CRAMM: virtual memory support for garbage-collected applications</a></strong><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[USENIX 2006]</span><br />
+				      <strong><a href="http://www.cs.umass.edu/~emery/pubs/tmm-usenix06.pdf">Transparent contribution of memory</a></strong><br />
+				    </td>
+				  </tr>
+				</table>
+				
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[USENIX 2006]</span><br />
+				      <strong><a href="http://www.cs.umass.edu/~emery/pubs/flux-usenix06.pdf">Flux: a language for programming high-performance servers</a></strong><br />
+				    </td>
+				  </tr>
+				</table>
+				
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">
+					[OOPSLA 2005]
+				      </span><br />
+				      <strong><a href="http://dl.acm.org/authorize?874044">
+					  Quantifying the performance of garbage collection vs. explicit memory management</a></strong><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[PLDI 2005]</span><br />
+				      <strong><a href="http://dl.acm.org/authorize?861137">Garbage collection without paging</a></strong><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[OOPSLA 2002]</span><br />
+				      <strong><a href="http://dl.acm.org/authorize?34140">Reconsidering custom memory allocation</a> <span class="award">(Most Influential Paper Award)</span> </strong><br />
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td>
+				      <span class="conf">[PLDI 2001]</span><br />
+				      <strong><a href="http://dl.acm.org/authorize?675110">Composing high-performance memory allocators</a></strong><br />
+				      <em>see <a href="http://www.heaplayers.org/">HeapLayers.org</a></em>
+				    </td>
+				  </tr>
+				</table>
+
+				<table>
+				  <tr>
+				    <td valign="top">
+				      <span class="conf">[ASPLOS-IX]</span><br />
+				      <strong><a href="http://dl.acm.org/authorize?16188">Hoard: a scalable memory allocator for multithreaded applications</a></strong><br />
+				      <em>see <a href="http://www.hoard.org/">hoard.org</a></em> <span class="award">(Most Influential Paper Award)</span>
+				    </td>
+				  </tr>
+				</table>
+
 	    </td>
 	  </tr>
 
