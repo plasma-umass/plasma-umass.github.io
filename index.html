@@ -48,12 +48,20 @@
       }
       .globe {
 	  float: left;
-	  border-radius: 50%;
-	  shape-outside: url(plasma-globe.png);
+	  border-radius: 10%;
+	  width: 350px;
+	  height: 350px;
+	  shape-outside: circle(195px);
+	  shape-margin: 0px;
       }
       .conf {
 	  font-weight: bold;
 	  color: gray;
+      }
+      table {
+	  -webkit-column-break-inside: avoid;
+	  page-break-inside: avoid;
+	  break-inside: avoid;
       }
       tr {
 	  break-after: column;
@@ -99,16 +107,7 @@
 	    }
 	    //-->
 	  </script>
-	  <!--[if lte IE 6]>
-	      <style type="text/css">
-		#pagewrapper {width:expression(P7_MinMaxW(720,950));}
-		#container {height: 1%;}
-	      </style>
-	      <![endif]-->
-
-	       <!-- The min and max page width for Internet Explorer is set here. For other browsers it's in the stylesheet "Layout: Left sidebar + 1 column" -->
-
-
+	  
 	       </head>
 
 	<body>
@@ -126,10 +125,11 @@
 		      <tr>
 			<td>
 			  <div class="software">
+			    <img src="plasma-globe.png" alt="" class="globe"/>
 			    <table width="350">
 			      <tr valign="top">
 				<td>
-				  <img height="390" width="390" src="plasma-globe.png" alt="" class="globe"/>
+				  <br />
 				  The award-winning <b>PLASMA</b> group, led by Professors <b><a
 												href="http://www.emeryberger.com/">Emery Berger</a></b>, <b><a href="http://www.cs.umass.edu/~brun/">Yuriy Brun</a></b>, and <b><a href="https://guanh01.github.io/">Hui Guan</a></b>, <b>does cool stuff that matters.</b> We
 				  work on a variety of exciting topics that span
@@ -139,7 +139,7 @@
 				</td>
 			      </tr>
 			    </table>
-
+			    
 			    <table>
 			      <tr>
 				<td valign="top"><span class="subheader">PhD students</span></td>
@@ -164,21 +164,17 @@
 			      </tr>
 			    </table>
 
-			    <table>
+			    <table width="100%">
 			      <tr>
 				<td valign="top">
   				  <span class="subheader">software</span>
 				</td>
 			      </tr>
-			    </table>
-
-			    <table width="100%">
 			      <tr>
 				<td class="software-description">
 				  <strong><a href="http://www.automan-lang.org">AutoMan:</a></strong> DSL for programming with people
 				</td>
 				<td valign="top">
-				  <!-- Place this tag where you want the button to render. -->
 				  <a class="github-button" href="https://github.com/automan-lang/automan" data-icon="octicon-star" data-show-count="true" aria-label="Star automan-lang/automan on GitHub">Star</a>
 				</td>
 			      </tr>
@@ -190,7 +186,6 @@
 				  <strong><a href="http://bleak-detector.org">BLeak:</a></strong> Automatically debug memory leaks in web apps
 				</td>
 				<td valign="top">
-				  <!-- Place this tag where you want the button to render. -->
 				  <a class="github-button" href="https://github.com/plasma-umass/bleak" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/bleak on GitHub">Star</a>
 				</td>
 			      </tr>
@@ -202,7 +197,6 @@
 				  <strong><a href="https://github.com/jvilk/BrowserFS">BrowserFS:</a></strong> In-browser mountable filesystem (pure JS)
 				</td>
 				<td valign="top">
-				  <!-- Place this tag where you want the button to render. -->
 				  <a class="github-button" href="https://github.com/jvilk/browserfs" data-icon="octicon-star" data-show-count="true" aria-label="Star jvilk/browserfs on GitHub">Star</a>
 				</td>
 			      </tr>
@@ -214,7 +208,6 @@
 				  <strong><a href="https://browsix.org/">Browsix:</a></strong> Unix in your browser tab
 				</td>
 				<td valign="top">
-				  <!-- Place this tag where you want the button to render. -->
 				  <a class="github-button" href="https://github.com/plasma-umass/browsix" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/browsix on GitHub">Star</a>
 				</td>
 			      </tr>
@@ -245,7 +238,6 @@
 			    <table width="100%">
 			      <tr>
 				<td class="software-description">
-				  <!-- <strong><a href="https://code.google.com/p/synoptic/">CSight:</a></strong> Concurrency modeling <br /> -->
 				  <strong><a href="https://github.com/emeryberger/DieHard">DieHard:</a></strong> Error-resistant <tt>malloc</tt> for C/C++<br /><strong><a href="https://github.com/emeryberger/DieHard">DieHarder:</a></strong> Secure <tt>malloc</tt><br /><strong><a href="https://github.com/emeryberger/DieHard">Exterminator:</a></strong> Automatically finds and corrects memory erorrs<br />
 				</td>
 				<td valign="top">
@@ -368,68 +360,85 @@
 				
 			  </div>
 			  
-		    <table>
-		      <tr>
-			<td>
-			  <br />
-			  <br />
-			  <span class="subheader">
-  			    other cool stuff<br /><br />
- 			  </span>
-			</td>
-		      </tr>
-		    </table>
+			  <table>
+			    <tr>
+			      <td>
+				<br />
+				<br />
+				<span class="subheader">
+  				  other cool stuff<br /><br />
+ 				</span>
+			      </td>
+			    </tr>
+			  </table>
+			  
+			  <table>
+			    <tr>
+			      <td>
+				Check out the <a href="https://www.sigplan.org/Resources/EmpiricalEvaluation/">Empirical Evaluation Guidelines</a> we put together as part of a SIGPLAN initiative. The checklist (<a href="https://github.com/SIGPLAN/empirical-evaluation/raw/master/checklist/checklist.pdf">download the handy-dandy PDF here</a>) is now recommended by several conferences, so make sure to use it when you are writing or reviewing papers!
+			      </td>
+			    </tr>
+			  </table>
+			  
+			  <table>
+			    <tr>
+			      <td>
+				<br />
+				<span class="subheader">
+  				  recent talks
+				  <br />
+				</span>
+			      </td>
+			    </tr>
+			    <tr>
+			      <td>
+				<div class="software">
+				  <table>
+				    <tr>
+				      <td>
+					<iframe width="300" height="168" src="https://www.youtube.com/embed/JNW4v93fHr8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				      </td>
+				    </tr>
+				  </table>
+				  <table>
+				    <tr>
+				      <td>
+					<iframe width="300" height="168" src="https://www.youtube.com/embed/7g1Acy5eGbE?start=306" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				      </td>
+				    </tr>
+				  </table>
+
+				  <table>
+				    <tr>
+				      <td>
+					<iframe width="300" height="168" src="https://www.youtube.com/embed/r-TLSBdHe1A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				      </td>
+				    </tr>
+				  </table>
+				  
+				  <table>
+				    <tr>
+				      <td>
+					<iframe width="300" height="168" src="https://www.youtube.com/embed/eyoAqNKTjGQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				      </td>
+				    </tr>
+				  </table>
+
+				  <table>
+				    <tr>
+				      <td>
+					<iframe width="300" height="168" src="https://www.youtube.com/embed/c1UBJbfR-H0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				      </td>
+				    </tr>
+				  </table>
+				</div>
+			      </td>
+			    </tr>
+			  </table>
 
 		    <table>
 		      <tr>
 			<td>
-			  Check out the <a href="https://www.sigplan.org/Resources/EmpiricalEvaluation/">Empirical Evaluation Guidelines</a> we put together as part of a SIGPLAN initiative. The checklist (<a href="https://github.com/SIGPLAN/empirical-evaluation/raw/master/checklist/checklist.pdf">download the handy-dandy PDF here</a>) is now recommended by several conferences, so make sure to use it when you are writing or reviewing papers!
-			</td>
-		      </tr>
-		    </table>
-
-		    <table>
-		      <tr>
-			<td>
-			  <br />
-			  <span class="subheader">
-  			    recent talks
-			    <br />
-			  </span>
-			</td>
-		      </tr>
-		    </table>
-
-		    <div class="software">
-		    <table>
-		      <tr>
-			<td>
-			  <iframe width="300" height="168" src="https://www.youtube.com/embed/JNW4v93fHr8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</td>
-		      </tr>
-		      <tr>
-			<td>
-			  <iframe width="300" height="168" src="https://www.youtube.com/embed/7g1Acy5eGbE?start=306" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</td>
-		      </tr>
-		      <tr>
-			<td>
-			  <iframe width="300" height="168" src="https://www.youtube.com/embed/r-TLSBdHe1A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</td>
-		      </tr>
-		      <tr>
-			<td>
-			  <iframe width="300" height="168" src="https://www.youtube.com/embed/eyoAqNKTjGQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</td>
-		      </tr>
-		      <tr>
-			<td>
-			  <iframe width="300" height="168" src="https://www.youtube.com/embed/c1UBJbfR-H0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</td>
-		      </tr>
-		    </table>
-		    </div>
-
 		    <br />
 		    <span class="subheader">
   		      PLASMA courses
@@ -642,7 +651,6 @@
 				  <td>
 				    <span class="conf">[UIST 2019]<span><br />
 					<strong><a href="http://tea-lang.org/index_files/tea_UIST2019.pdf">Tea: A High-level Language and Runtime System for Automating Statistical Analysis</a></strong>
-					(<em><a href="http://tea-lang.org/index_files/tea_UIST2019.pdf">pdf</a></em>)
 				      </td>
 				    </tr>
 				  </table>
@@ -682,7 +690,7 @@
 				      <td>
 					<a href="http://esec-fse17.uni-paderborn.de/"><span class="conf">[ESEC/FSE 2017]</span></a><br />
 					<strong><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Galhotra17fse.pdf">Fairness Testing: Testing Software for Discrimination</a></strong>
-					(<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Galhotra17fse.pdf">pdf</a></em>, <span class="award">ACM SIGSOFT Distinguished Paper Award</span>)
+					(<span class="award">ACM SIGSOFT Distinguished Paper Award</span>)
 				      </td>
 				    </tr>
 				  </table>
@@ -716,7 +724,6 @@
 				      <td>
 					<a href="http://aster.or.jp/conference/icst2017/"><span class="conf">[ICST 2017]</span></a><br />
 					<strong><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Wang17icst.pdf">Behavioral Execution Comparison: Are Tests Representative of Field Behavior?</a></strong>
-					(<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Wang17icst.pdf">pdf</a></em>)
 				      </td>
 				    </tr>
 				  </table>
@@ -746,7 +753,6 @@
 				      <td>
 					<span class="conf"><a href="http://2016.splashcon.org/track/splash-2016-oopsla">[OOPSLA 2016]</a></span><br />
 					<strong><a href="https://arxiv.org/abs/1610.04790">Prioritized garbage collection: explicit GC support for software caches</a></strong>
-					(<em><a href="https://arxiv.org/pdf/1610.04790">pdf</a></em>)
 				      </td>
 				    </tr>
 				  </table>
@@ -1242,7 +1248,7 @@
 		  <!-- Start Footer. Edit the footer in the Global Content Block called "footer" -->
 		  <div id="footer">
 		    <p align="center"><em><font size="2" face="Arial"><a href="http://www.cs.umass.edu">College of Information and Computer Sciences</a> - 140 Governors Drive - </font></em><em><font size="2" face="Arial">Amherst, MA 01003</font></em> <br />
-		      <font size="2" face="Arial">Copyright © 2006-20
+		      <font size="2" face="Arial">Copyright © 2006-21
 			<a href="http://www.emeryberger.com/">Emery Berger</a>,
 			<a href="http://www.cs.umass.edu/~brun/">Yuriy Brun</a>, and
 			<a href="https://guanh01.github.io/">Hui Guan</a>, 
