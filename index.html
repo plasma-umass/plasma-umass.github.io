@@ -19,32 +19,41 @@
       .newitem {
           background-color: gray; color: white; font-size:80%; font-family: courier;      
       }
+      .grid-container {
+	  display: grid;
+	  column-gap: 20px;
+	  grid-template-columns: repeat(3, auto);
+	  align-content: start;
+	  height: auto;
+      }
+      .col1 {
+	  grid-column: 1;
+      }
+      .col12 {
+	  grid-column: 1 / span 2;
+      }
+      .col13 {
+	  grid-column: 1 / span 3;
+      }
+      .col2 {
+	  grid-column: 2;
+      }
+      .col3 {
+	  grid-column: 3;
+      }
       .subheader {
-          font-size:2;
+          font-size: larger;
           font-family: Trebuchet MS;
           color: red;
           font-style: oblique;
           font-weight: bold;
       }
-      .news {
-	  -webkit-columns: 4 150px;
-	  -moz-columns: 4 150px;
-	  columns: 4 150px;
-	  -webkit-column-gap: 2em;
-	  -moz-column-gap: 2em;
-	  column-gap: 2em;
-      }
       .software-description {
-	  vertical-align: top;
-	  width: 250px;
+	  vertical-align: middle;
       }
       .software {
-	  -webkit-columns: 2 300px;
-	  -moz-columns: 2 300px;
-	  columns: 2 300px;
-	  -webkit-column-gap: 2em;
-	  -moz-column-gap: 2em;
-	  column-gap: 2em;
+      }
+      .talk {
       }
       .globe {
 	  float: left;
@@ -98,654 +107,273 @@
 	  <link rel="prev" title="Awards &amp; Support" href="emery/awards.html" />
 	  <link rel="next" title="Bio, Vita &amp; Contact Info" href="emery/contact-info.html" />
 
-
-
-	  <script type="text/JavaScript">
-    <!--
-	    //pass min and max -measured against window width
-	    function P7_MinMaxW(a,b){
-		var nw="auto",w=document.documentElement.clientWidth;
-		if(w>=b){nw=b+"px";}if(w<=a){nw=a+"px";}return nw;
-	    }
-	    //-->
-	  </script>
 	  
-	       </head>
-
+	</head>
 	<body>
 
-	  <div id="pagewrapper">
+	  <div class="grid-container" style="width:800px">
 
-	    <div>
+	    <div class="col1">
+	      <img src="plasma-globe.png" alt="" class="globe"></img>
+	    </div>
+	    
+	    <div class="col2">
+	      The award-winning <b>PLASMA</b> group, led by Professors <b><a href="http://www.emeryberger.com/">Emery Berger</a></b>, <b><a href="http://www.cs.umass.edu/~brun/">Yuriy Brun</a></b>, and <b><a href="https://guanh01.github.io/">Hui Guan</a></b>, <b>does cool stuff that matters.</b> We work on a variety of exciting topics that span programming languages, software engineering, and systems.
+	    </div>
+	    
+	    <div class="col3">
+	      <div class="subheader">PhD students</div>
+	      <a href="https://github.com/jaltmayerpizzorno">Juan Altmayer Pizzorno</a><br />
+	      <!-- <a href="https://emilyaherbert.github.io/">Emily Herbert</a><br /> -->
+	      <!--					  <a href="https://donaldpinckney.com">Donald Pinckney</a><br /> -->
+	      <a href="https://bpowers.net">Bobby Powers</a><br />
+	      <!-- <a href="https://sp1tz.github.io/">Joseph Spitzer</a><br /> -->
+	      <a href="https://samstern.me/">Sam Stern</a><br />
+	      <a href="https://nvankempen.com/">Nicolas van Kempen</a><br />
 
-	      <div>
+	      <div class="subheader">alumni</div>
+	      <a href="https://www.linkedin.com/in/justin-aquadro-4547561a/">Justin Aquadro</a> (MS, MachineMetrics)<br />
+	      <a href="http://www.cs.williams.edu/~dbarowy/">Dan Barowy</a> (PhD, Asst. Prof., Williams College)<br />
+	      <a href="http://www.cs.grinnell.edu/~curtsinger/">Charlie Curtsinger</a> (PhD, Assoc. Prof., Grinnell College)<br />
+	      <a href="https://bashfulbytes.com/">Breanna Devore-McDonald</a> (MS, Inteon / Intel)<br />
+	      <a href="https://www.linkedin.com/in/yi-feng-0b10241bb/">Yi (Eric) Feng</a> (MS, pony.ai, ex-Google)<br />
+	      <a href=" https://www.cse.buffalo.edu/~mhertz/"> Matthew Hertz</a> (PhD, Univ. of Buffalo)<br />
+	      <a href="https://sites.google.com/site/abhijangda/">Abhinav Jangda</a> (PhD, Microsoft Research)<br />
+	      <a href="https://www.linkedin.com/in/divya-krishnan-6b827115/">Divya Krishnan</a> (MS, Cisco Systems)<br />
+	      <a href="http://www.cs.utsa.edu/~tongpingliu/">Tongping Liu</a> (PhD, Asst. Professor, UMass ECE)<br />
+	      <a href="https://www.linkedin.com/in/vitaliyl/">Vitaliy Lvin</a></a> (MS, Boston Dynamics)<br />
+	    <a href="https://www.linkedin.com/in/gene-novark-183a4b20/">Gene Novark</a> (PhD, PDT Partners)<br />
+	    <a href="https://www.linkedin.com/in/tedks/">Ted Smith</a> (MS, Bloomberg LP)<br />
+	    <a href="https://jvilk.com/">John Vilk</a> (PhD, Stripe)<br />
+	    <a href="https://www.linkedin.com/in/tingyang/">Ting Yang</a> (PhD, Meta)<br />
+	    
+	    </div>
+	    
+	  <div class="col13">
+	    <span class="subheader">
+	      <center>
+		selected software projects: <a href="https://github.com/plasma-umass">full list here</a>
+	      </center>
+ 	    </span>
+	    <br />
+	  </div>
+	    
+	    <!--
+		<div>
+	      Check out the <a href="https://www.sigplan.org/Resources/EmpiricalEvaluation/">Empirical Evaluation Guidelines</a> we put together as part of a SIGPLAN initiative. The checklist (<a href="https://github.com/SIGPLAN/empirical-evaluation/raw/master/checklist/checklist.pdf">download the handy-dandy PDF here</a>) is now recommended by several conferences, so make sure to use it when you are writing or reviewing papers!
+		</div>
+		-->
+
+	    <div class="software-description">
+	      <strong><a href="http://www.automan-lang.org">AutoMan:</a></strong> DSL for programming with people
+	      <br />
+	      <a class="github-button" href="https://github.com/automan-lang/automan" data-icon="octicon-star" data-show-count="true" aria-label="Star automan-lang/automan on GitHub">Star</a>
+	    </div>
+	    
+	    <div class="software-description">
+	      <strong><a href="http://bleak-detector.org">BLeak:</a></strong> Debugs memory leaks in web apps
+	      <br />
+	      <a class="github-button" href="https://github.com/plasma-umass/bleak" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/bleak on GitHub">Star</a>
+	    </div>
+	    
+	    
+	    <div class="software-description">
+	      <strong><a href="https://github.com/jvilk/BrowserFS">BrowserFS:</a></strong> In-browser mountable filesystem
+	      <br />
+	      <a class="github-button" href="https://github.com/jvilk/browserfs" data-icon="octicon-star" data-show-count="true" aria-label="Star jvilk/browserfs on GitHub">Star</a>
+	    </div>
+	    
+	    <div class="software-description">
+	      <strong><a href="https://browsix.org/">Browsix:</a></strong> Unix in your browser tab
+	      <br />
+	      <a class="github-button" href="https://github.com/plasma-umass/browsix" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/browsix on GitHub">Star</a>
+	    </div>
+	    
+	    <div class="software-description">
+	      <strong><a href="https://csrankings.org/">CSrankings:</a></strong> Ranking world's CS departments
+	      <br />
+	      <a class="github-button" href="https://github.com/emeryberger/CSrankings" data-icon="octicon-star" data-show-count="true" aria-label="Star emeryberger/CSrankings on GitHub">Star</a>
+	    </div>
+
+	    <div class="software-description">
+	      <strong><a href="http://github.com/plasma-umass/coz">Coz:</a></strong> A causal profiler
+	      <br />
+	      <a class="github-button" href="https://github.com/plasma-umass/coz" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/coz on GitHub">Star</a>
+	    </div>
+	    
+	    <div class="software-description">
+	      <strong>
+		<a href="https://github.com/emeryberger/DieHard">DieHard(er):</a></strong> Error-resistant / secure <tt>malloc</tt>
+	      <br />
+	      <a class="github-button" href="https://github.com/emeryberger/diehard" data-icon="octicon-star" data-show-count="true" aria-label="Star emeryberger/diehard on GitHub">Star</a>
+	    </div>
+	    
+	    <div class="software-description">
+	      <strong><a href="http://www.doppiojvm.org">Doppio:</a></strong> POSIX layer and JVM in pure JavaScript
+	      <br />
+	      <a class="github-button" href="https://github.com/plasma-umass/doppio" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/doppio on GitHub">Star</a>
+	    </div>
+	    
+	    <div class="software-description">
+	      <strong><a href="http://github.com/plasma-umass/ExceLint-addin">ExceLint:</a></strong> Finds errors in spreadsheets
+	      <br />
+	      <a class="github-button" href="https://github.com/plasma-umass/excelint-addin" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/excelint-addin on GitHub">Star</a>
+	    </div>
+	    
+	    <div class="software-description">
+	      <!-- <strong><a href="http://www.dthreads.org">Dthreads:</a></strong> Efficient deterministic multithreading<br /> -->
+	      <strong><a href="https://github.com/emeryberger/Heap-Layers">Heap Layers:</a></strong> Allocator infrastructure
+	      <br />
+	      <a class="github-button" href="https://github.com/emeryberger/Heap-Layers" data-icon="octicon-star" data-show-count="true" aria-label="Star emeryberger/Heap-Layers on GitHub">Star</a>
+	    </div>
+	    
+	    <div class="software-description">
+	      <strong><a href="http://www.hoard.org">Hoard:</a></strong> Fast, scalable <tt>malloc</tt> for multicore
+	      <br />
+	      <a class="github-button" href="https://github.com/emeryberger/hoard" data-icon="octicon-star" data-show-count="true" aria-label="Star emeryberger/hoard on GitHub">Star</a>
+	    </div>
+	    
+	    <div class="software-description">
+	      <strong><a href="https://github.com/plasma-umass/Mesh">Mesh:</a></strong> Compacting <tt>malloc</tt>
+	      <br />
+	      <a class="github-button" href="https://github.com/plasma-umass/Mesh" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/Mesh on GitHub">Star</a>
+	    </div>
+	    
+	    <div class="software-description">
+	      <strong><a href="https://github.com/plasma-umass/scalene">Scalene:</a></strong> CPU+GPU+memory Python profiler
+	      <br />
+	      <a class="github-button" href="https://github.com/plasma-umass/scalene" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/scalene on GitHub">Star</a>
+	    </div>
+	    
+	    <div class="software-description">
+	      <strong><a href="https://github.com/plasma-umass/slipcover">SlipCover:</a></strong> Near zero-overhead coverage analysis for Python
+	      <br />
+	      <a class="github-button" href="https://github.com/plasma-umass/slipcover" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/slipcover on GitHub">Star</a>
+	    </div>
+	    
+<!--			    
+	    <div class="software-description">
+	      <strong><a href="http://stabilizer-tool.org">Stabilizer:</a></strong> Statistically sound performance analysis <br />
+	      <a class="github-button" href="https://github.com/ccurtsinger/stabilizer" data-icon="octicon-star" data-show-count="true" aria-label="Star ccurtsinger/stabilizer on GitHub">Star</a>
+	    </div>
+-->	    
+			  
+	    <div class="software-description">
+	      <strong><a href="http://tea-lang.org">Tea:</a></strong> Automated statistical analysis<br />
+	      <a class="github-button" href="https://github.com/tea-lang-org/tea-lang" data-icon="octicon-star" data-show-count="true" aria-label="Star emjun/tea-lang on GitHub">Star</a>
+	    </div>
+
+	    
+	    <div class="col13">
+	      <br />
+	    </div>
+	    
+	    <div class="col13">
+	      <span class="subheader">
 		<center>
-		  <br />
-		  
-		  <table width="800" border="0" cellpadding="0" height="400" cellspacing="0" style="border-collapse: collapse;">
-		    <tbody>
-		      <tr>
-			<td>
-			  <div class="software">
-			    <img src="plasma-globe.png" alt="" class="globe"/>
-			    <table width="350">
-			      <tr valign="top">
-				<td>
-				  The award-winning <b>PLASMA</b> group, led by Professors <b><a
-												href="http://www.emeryberger.com/">Emery Berger</a></b>, <b><a href="http://www.cs.umass.edu/~brun/">Yuriy Brun</a></b>, and <b><a href="https://guanh01.github.io/">Hui Guan</a></b>, <b>does cool stuff that matters.</b> We
-				  work on a variety of exciting topics that span
-				  programming languages, software engineering, and systems.
-				  <br />
-				  <br />
-				</td>
-			      </tr>
-			    </table>
-			    
-			    <table>
-			      <tr>
-				<td valign="top"><span class="subheader">PhD students</span></td>
-			      </tr>
-			      <tr>
-				<td>
-				  <font size="2" color="red">
-				    <strong>
-				      <a href="https://github.com/jaltmayerpizzorno">Juan Altmayer Pizzorno</a><br />
-				      <a href="https://bashfulbytes.com/">Breanna Devore-McDonald</a><br />
-				      <!-- <a href="https://emilyaherbert.github.io/">Emily Herbert</a><br /> -->
-				      <a href="https://sites.google.com/site/abhijangda/">Abhinav Jangda</a><br />
-				      <!--					  <a href="https://donaldpinckney.com">Donald Pinckney</a><br /> -->
-				      <a href="https://bpowers.net">Bobby Powers</a><br />
-				      <!-- <a href="https://sp1tz.github.io/">Joseph Spitzer</a><br /> -->
-				      <a href="https://samstern.me/">Sam Stern</a><br />
-				      <a href="https://nvankempen.com/">Nicolas van Kempen</a><br />
-				    </strong>
-				  </font>
-				   <br />
-				</td>
-			      </tr>
-			    </table>
+		  selected talks
+		</center>
+ 	      </span>
+	      <br />
+	    </div>
+	    
+	    <div class="talk">
+	      <iframe width="300" height="168" src="https://www.youtube.com/embed/nrQPqy3YY5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	    </div>
+	    
+	    <div class="talk">
+	      <iframe width="300" height="168" src="https://www.youtube.com/embed/JNW4v93fHr8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	    </div>
+	    
+	    <div class="talk">
+	      <iframe width="300" height="168" src="https://www.youtube.com/embed/7g1Acy5eGbE?start=306" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	    </div>
+	    
+	    <div class="talk">
+	      <iframe width="300" height="168" src="https://www.youtube.com/embed/r-TLSBdHe1A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	    </div>
+	    
+	    <div class="talk">
+	      <iframe width="300" height="168" src="https://www.youtube.com/embed/GyWKxFxyyrQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	    </div>
+	    
+	    <div class="talk">
+	      <iframe width="300" height="168" src="https://www.youtube.com/embed/eyoAqNKTjGQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	    </div>
+	    
+	    <div class="talk">
+	      <iframe width="300" height="168" src="https://www.youtube.com/embed/c1UBJbfR-H0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	    </div>
 
-			    <table width="100%">
-			      <tr>
-				<td valign="top">
-  				  <span class="subheader">software</span>
-				</td>
-			      </tr>
-			      <tr>
-				<td class="software-description">
-				  <strong><a href="http://www.automan-lang.org">AutoMan:</a></strong> DSL for programming with people
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/automan-lang/automan" data-icon="octicon-star" data-show-count="true" aria-label="Star automan-lang/automan on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
-			    
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <strong><a href="http://bleak-detector.org">BLeak:</a></strong> Automatically debug memory leaks in web apps
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/plasma-umass/bleak" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/bleak on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
+	    <div class="col13"></div>
+	    
+	    <!--
+		<div>
+	      <span class="subheader">
+  		PLASMA courses
+ 	      </span>
+	      (<a href="courses.html">full list</a>)
+	      <br />
+	      
+	      We teach a series of popular programming languages, systems, and software
+	      engineering courses, including software program analysis (<a href="http://cs.umass.edu/~brun/class/CS521.621">CMPSCI 521/621</a>) and a graduate course on system design (<a href="http://plasma.cs.umass.edu/emery/grad-systems.html">CMPSCI 630</a>). See the <a href="courses.html">full list of courses we teach</a>.
+	    </div>
+		-->
+		
 
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <strong><a href="https://github.com/jvilk/BrowserFS">BrowserFS:</a></strong> In-browser mountable filesystem (pure JS)
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/jvilk/browserfs" data-icon="octicon-star" data-show-count="true" aria-label="Star jvilk/browserfs on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
-			    
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <strong><a href="https://browsix.org/">Browsix:</a></strong> Unix in your browser tab
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/plasma-umass/browsix" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/browsix on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
-			      
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <strong><a href="https://csrankings.org/">CSrankings:</a></strong> Web app for ranking CS departments
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/emeryberger/CSrankings" data-icon="octicon-star" data-show-count="true" aria-label="Star emeryberger/CSrankings on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
-			    
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <strong><a href="http://github.com/plasma-umass/coz">Coz:</a></strong> A causal profiler
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/plasma-umass/coz" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/coz on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
-			    
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <strong><a href="https://github.com/emeryberger/DieHard">DieHard:</a></strong> Error-resistant <tt>malloc</tt> for C/C++<br /><strong><a href="https://github.com/emeryberger/DieHard">DieHarder:</a></strong> Secure <tt>malloc</tt><br /><strong><a href="https://github.com/emeryberger/DieHard">Exterminator:</a></strong> Automatically finds and corrects memory erorrs<br />
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/emeryberger/diehard" data-icon="octicon-star" data-show-count="true" aria-label="Star emeryberger/diehard on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
-			    
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <strong><a href="http://www.doppiojvm.org">Doppio:</a></strong> POSIX layer and JVM in pure JavaScript
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/plasma-umass/doppio" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/doppio on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
-			    
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <strong><a href="http://github.com/plasma-umass/ExceLint-addin">ExceLint:</a></strong> Finds formula errors in Excel spreadsheets
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/plasma-umass/excelint-addin" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/excelint-addin on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
-			    
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <!-- <strong><a href="http://www.dthreads.org">Dthreads:</a></strong> Efficient deterministic multithreading<br /> -->
-				  <strong><a href="https://github.com/emeryberger/Heap-Layers">Heap Layers:</a></strong> Template-based building blocks for custom and general-purpose allocators
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/emeryberger/Heap-Layers" data-icon="octicon-star" data-show-count="true" aria-label="Star emeryberger/Heap-Layers on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
-			    
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <strong><a href="http://www.hoard.org">Hoard:</a></strong> Fast, scalable <tt>malloc</tt> for multicore
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/emeryberger/hoard" data-icon="octicon-star" data-show-count="true" aria-label="Star emeryberger/hoard on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
-			    
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <strong><a href="https://github.com/plasma-umass/Mesh">Mesh:</a></strong> Compacting <tt>malloc</tt>
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/plasma-umass/Mesh" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/Mesh on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
-			    
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <strong><a href="https://github.com/plasma-umass/scalene">Scalene:</a></strong> A high-performance, high-precision CPU+GPU+memory profiler for Python<br />
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/plasma-umass/scalene" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/scalene on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
+	    <div class="paper">
+	      <span class="conf">[OOPSLA 2019]</span><br />
+		<a href="https://arxiv.org/abs/1909.13649">PlanAlyzer: Assessing Threats to the Validity of Online Experiments</a>
+	      <span class="award">(CACM Research Highlight)</span>
+	    </div>
+	    
 
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <strong><a href="https://github.com/plasma-umass/slipcover">SlipCover:</a></strong> Near zero-overhead coverage analysis for Python<br />
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/plasma-umass/slipcover" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/slipcover on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
-			    
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <strong><a href="http://stabilizer-tool.org">Stabilizer:</a></strong> Statistically sound performance analysis <br />
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/ccurtsinger/stabilizer" data-icon="octicon-star" data-show-count="true" aria-label="Star ccurtsinger/stabilizer on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
-			    
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <strong><a href="https://github.com/plasma-umass/stopify">Stopify: </a></strong> Enables building IDEs for languages compiled to JS
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/plasma-umass/stopify" data-icon="octicon-star" data-show-count="true" aria-label="Star plasma-umass/stopify on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
-			    
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <strong><a href="http://tea-lang.org">Tea:</a></strong> Automated statistical analysis<br />
-				</td>
-				<td valign="top">
-				  <a class="github-button" href="https://github.com/tea-lang-org/tea-lang" data-icon="octicon-star" data-show-count="true" aria-label="Star emjun/tea-lang on GitHub">Star</a>
-				</td>
-			      </tr>
-			    </table>
-				
-			    <table width="100%">
-			      <tr>
-				<td class="software-description">
-				  <strong>
-				    <a href="https://github.com/plasma-umass">github.com/plasma-umass</a>
-				  </strong>
-				</td>
-				<td>
-				</td>
-			      </tr>
-			    </table>
-				
-			  </div>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<br />
-				<br />
-				<span class="subheader">
-  				  other cool stuff<br /><br />
- 				</span>
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				Check out the <a href="https://www.sigplan.org/Resources/EmpiricalEvaluation/">Empirical Evaluation Guidelines</a> we put together as part of a SIGPLAN initiative. The checklist (<a href="https://github.com/SIGPLAN/empirical-evaluation/raw/master/checklist/checklist.pdf">download the handy-dandy PDF here</a>) is now recommended by several conferences, so make sure to use it when you are writing or reviewing papers!
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<br />
-				<span class="subheader">
-  				  recent talks
-				  <br />
-				</span>
-			      </td>
-			    </tr>
-			    <tr>
-			      <td>
-				<div class="software">
-				  <table>
-				    <tr>
-				      <td>
-					<iframe width="300" height="168" src="https://www.youtube.com/embed/nrQPqy3YY5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				      </td>
-				    </tr>
-				  </table>
-				  <table>
-				    <tr>
-				      <td>
-					<iframe width="300" height="168" src="https://www.youtube.com/embed/JNW4v93fHr8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				      </td>
-				    </tr>
-				  </table>
-				  <table>
-				    <tr>
-				      <td>
-					<iframe width="300" height="168" src="https://www.youtube.com/embed/7g1Acy5eGbE?start=306" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				      </td>
-				    </tr>
-				  </table>
+	    <div class="paper">
+	      <span class="conf">[UIST 2019]</span><br />
+	      <a href="http://tea-lang.org/index_files/tea_UIST2019.pdf">Tea: A High-level Language and Runtime System for Automating Statistical Analysis</a>
+	    </div>
 
-				  <table>
-				    <tr>
-				      <td>
-					<iframe width="300" height="168" src="https://www.youtube.com/embed/r-TLSBdHe1A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				      </td>
-				    </tr>
-				  </table>
-				  
-				  <table>
-				    <tr>
-				      <td>
-					<iframe width="300" height="168" src="https://www.youtube.com/embed/GyWKxFxyyrQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				      </td>
-				    </tr>
-				  </table>
+	    <div class="paper">
+	      <span class="conf">[PLDI 2019]</span><br />
+	      <a href="https://arxiv.org/pdf/1902.04738.pdf">Mesh: Compacting Memory Management for C/C++ Applications</a>
+	      (<em><a href="https://arxiv.org/pdf/1902.04738.pdf">pdf</a></em>)
+	    </div>
 
-				  <table>
-				    <tr>
-				      <td>
-					<iframe width="300" height="168" src="https://www.youtube.com/embed/eyoAqNKTjGQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				      </td>
-				    </tr>
-				  </table>
+	    <div class="paper">
+	      <span class="conf">[OOPSLA 2018]</span><br />
+	      <a href="https://arxiv.org/pdf/1901.11100.pdf">ExceLint: automatically finding spreadsheet formula errors</a>
+	      (<em><a href="https://arxiv.org/pdf/1901.11100.pdf">pdf</a></em>)
+	    </div>
 
-				  <table>
-				    <tr>
-				      <td>
-					<iframe width="300" height="168" src="https://www.youtube.com/embed/c1UBJbfR-H0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				      </td>
-				    </tr>
-				  </table>
-				</div>
-			      </td>
-			    </tr>
-			  </table>
+	    <div class="paper">
+	      <span class="conf">[PLDI 2018]</span><br />
+	      <a href="https://jvilk.com/assets/pdf/bleak.pdf">BLeak: Automatically Debugging Memory Leaks in Web Applications</a>
+	      <span class="award">(CACM Research Highlight)</span>
+	    </div>
 
-		    <table>
-		      <tr>
-			<td>
-		    <br />
-		    <span class="subheader">
-  		      PLASMA courses
- 		    </span>
-		    (<a href="courses.html">full list</a>)
-		    <br />
-		    <br />
+	    <div class="paper">
+	      <a href="http://esec-fse17.uni-paderborn.de/"><span class="conf">[ESEC/FSE 2017]</span></a><br />
+	      <a href="http://people.cs.umass.edu/~brun/pubs/pubs/Galhotra17fse.pdf">Fairness Testing: Testing Software for Discrimination</a>
+	      (<span class="award">ACM SIGSOFT Distinguished Paper Award</span>)
+	    </div>
 
-		    We teach a series of popular programming languages, systems, and software
-		    engineering courses, including
-		    software program analysis (<a
-						 href="http://cs.umass.edu/~brun/class/CS521.621">CMPSCI 521/621</a>) and a
-		    graduate courses on system design (<a
-							 href="http://plasma.cs.umass.edu/emery/grad-systems.html">CMPSCI 630</a>). See
-		    the <a href="courses.html">full list of courses we teach</a>.
-		    <tr>
-		      <td valign="top">
-			<br />
-			<span class="subheader">
-  			  recent news
-			</span>
-			<br />
-			<br />
-		      </td>
-		    </tr>
-		    
-		    <tr>
-		      <td>
-			<div class="news">
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<b>[October 2020]</b><br />
-				Two PLASMA papers accepted to appear at OOPSLA 2020
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<b>[January 2020]</b><br />
-				Two PLASMA talks make Cindy Sridharan's <a href="https://medium.com/@copyconstruct/best-of-2019-in-tech-talks-bac697c3ee13?source=linkShare-87c8c84f24b1-1580069710&_branch_match_id=746837309291433665">Best of 2019 in Tech Talks</a>!
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<b>[December 2019]</b><br />
-				Prof. Berger named <a href="https://www.acm.org/media-center/2019/december/fellows-2019">an ACM Fellow</a>.
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<b>[October 2019]</b><br />
-				Three PLASMA papers to appear at <a href="https://2019.splashcon.org/program/program-splash-2019?track=SPLASH%20OOPSLA">OOPSLA</a>!
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<b>[September 2019]</b><br />
-				PLASMA paper selected to appear as a <a href="https://www.sigplan.org/Highlights/Papers/">Communications of the ACM Research Highlight</a>! (<a href="https://github.com/plasma-umass/BLeak/raw/master/paper.pdf"><b>BLeak: Automatically Debugging Memory Leaks in Web Applications</b>)</a>.
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<b>[June 2019]</b><br />
-				<a href="http://tea-lang.org/index_files/tea_UIST2019.pdf"><b>Tea: A High-level Language and Runtime System for Automating Statistical Analysis</b></a> accepted to appear at UIST 2019 (more at <b><a href="http://tea-lang.org">tea-lang.org</a></b>).
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<b>[April 2019]</b><br />
-				<b><a href="https://www.usenix.org/system/files/atc19-jangda.pdf">Not so fast: analyzing the performance of webassembly vs. native code</a></b> to appear at USENIX ATC 2019.
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<b>[February 2018]</b><br />
-				Two PLASMA papers accepted to appear at PLDI 2018: <a href="https://github.com/plasma-umass/BLeak/raw/master/paper.pdf"><b>BLeak: Automatically Debugging Memory Leaks in Web Applications</b></a> (<a href="http://bleak-detector.org"><b>BLeak</b></a>) and <a href="https://arxiv.org/pdf/1802.02974.pdf"><b>Putting in All the Stops: Execution Control for JavaScript</b></a> (<a href="http://stopify.org"><b>Stopify</b></a>).
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<b>[September 2017]</b><br />
-				<b><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Galhotra17fse.pdf">Fairness Testing: Testing Software for Discrimination</a></b> wins an ACM SIGSOFT Distinguished Paper Award at <a href="http://esec-fse17.uni-paderborn.de/">ESEC/FSE 2017</a>.<br/>
-				Prof. Brun receives <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1744471">NSF grant on software fairness testing</a>.<br />
-				Prof. Brun promoted to Associate Professor with tenure.<br/>
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<b>[July 2017]</b><br />
-				Prof. Brun promoted to Senior Member of both the ACM and the IEEE.<br/>
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<b>[June 2017]</b><br />
-				<b><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Galhotra17fse.pdf">Fairness Testing: Testing Software for Discrimination</a></b> accepted to <a href="http://esec-fse17.uni-paderborn.de/">ESEC/FSE 2017</a>.<br/>
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<b>[May 2017]</b><br />
-				Prof. Brun receives the UMass College of Information and Computer Science Outstanding Teacher Award.<br/>
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<b>[April 2017]</b><br />
-				Prof. Brun receives a <a href="http://www.umass.edu/newsoffice/article/tefd-announces-2017-18-lilly-fellows">Lilly Fellowship for Teaching Excellence</a>.<br/>
-				<b><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Bang17icsa.pdf">Continuous Analysis of Collaborative Design</a></b> wins the Best Paper Award at <a href="http://icsa-conferences.org/2017/">ICSA 2017</a>.
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<b>[March 2017]</b><br />
-				<b><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Shin17tsmc.pdf">Constraint-aware resource scheduling paper</a></b> accepted to the <a href="http://ieeexplore.ieee.org/servlet/opac?punumber=6221021">IEEE Transactions on Systems, Man, and Cybernetics: Systems</a>.<br/>
-				<b>PLASMA PhD student <a href="https://people.cs.umass.edu/~dbarowy/">Dan Barowy</a> to join Williams College as an Assistant Professor, starting Fall 2017</b>.
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<b>[February 2017]</b><br />
-				<b><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Bang17icsa.pdf">Collaborative design paper</a></b> accepted to <a href="http://icsa-conferences.org/2017/">ICSA 2017</a>.<br/>
-			      </td>
-			    </tr>
-			  </table>
-			  
-			  <table>
-			    <tr>
-			      <td>
-				<b>[January 2017]</b><br />
-				<b><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Wang17icst.pdf">Behavioral execution comparison paper</a></b> accepted to <a href="http://aster.or.jp/conference/icst2017/">ICST 2017</a>.<br/>
-			      </td>
-			    </tr>
-			  </table>
-			</div>
-		      </td>
-		    </tr>
-		    
+	    <div class="paper">
+	      <a href="http://ieeexplore.ieee.org/servlet/opac?punumber=6221021"><span class="conf">[IEEE SMC]</span></a><br />
+	      <strong><a href="http://ieeexplore.ieee.org/document/7887737/?reload=true">Discrete-Event Simulation and Integer Linear Programming for Constraint-Aware Resource Scheduling</a></strong>
+	      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Shin17tsmc.pdf">pdf</a></em>)
+	    </div>
 
-		    <tr>
-		      <td valign="top">
-			<br />
-			<span class="subheader">
-			  selected publications
- 			</span>
-			<br />
-			<br />
-		      </td>
-		    </tr>
 
-		    <tr>
-		      <td>
-			<div class="news">
-
-			  <table>
-			    <tr>
-			      <td>
-				<span class="conf">[OOPSLA 2019]<span><br />
-				    <strong><a href="https://arxiv.org/abs/1909.13649">PlanAlyzer: Assessing Threats to the Validity of Online Experiments</a></strong>
-				    <span class="award">(CACM Research Highlight)</span>
-				  </td>
-				</tr>
-			      </table>
-			      
-			      <table>
-				<tr>
-				  <td>
-				    <span class="conf">[UIST 2019]<span><br />
-					<strong><a href="http://tea-lang.org/index_files/tea_UIST2019.pdf">Tea: A High-level Language and Runtime System for Automating Statistical Analysis</a></strong>
-				      </td>
-				    </tr>
-				  </table>
-				  
-				  <table>
-				    <tr>
-				      <td>
-					<span class="conf">[PLDI 2019]</span><br />
-					<strong><a href="https://arxiv.org/pdf/1902.04738.pdf">Mesh: Compacting Memory Management for C/C++ Applications</a></strong>
-					(<em><a href="https://arxiv.org/pdf/1902.04738.pdf">pdf</a></em>)
-				      </td>
-				    </tr>
-				  </table>
-				  
-				  <table>
-				    <tr>
-				      <td>
-					<span class="conf">[OOPSLA 2018]</span><br />
-					<strong><a href="https://arxiv.org/pdf/1901.11100.pdf">ExceLint: automatically finding spreadsheet formula errors</a></strong>
-					(<em><a href="https://arxiv.org/pdf/1901.11100.pdf">pdf</a></em>)
-				      </td>
-				    </tr>
-				  </table>
-				  
-				  <table>
-				    <tr>
-				      <td>
-					<span class="conf">[PLDI 2018]</span><br />
-					<strong><a href="https://jvilk.com/assets/pdf/bleak.pdf">BLeak: Automatically Debugging Memory Leaks in Web Applications</a></strong>
-					<span class="award">(CACM Research Highlight)</span>
-				      </td>
-				    </tr>
-				  </table>
-
-				  <table>
-				    <tr>
-				      <td>
-					<a href="http://esec-fse17.uni-paderborn.de/"><span class="conf">[ESEC/FSE 2017]</span></a><br />
-					<strong><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Galhotra17fse.pdf">Fairness Testing: Testing Software for Discrimination</a></strong>
-					(<span class="award">ACM SIGSOFT Distinguished Paper Award</span>)
-				      </td>
-				    </tr>
-				  </table>
-
-				  <table>
-				    <tr>
-				      <td>
-					<a href="http://ieeexplore.ieee.org/servlet/opac?punumber=6221021"><span class="conf">[IEEE SMC]</span></a><br />
-					<strong><a href="http://ieeexplore.ieee.org/document/7887737/?reload=true">Discrete-Event Simulation and Integer Linear Programming for Constraint-Aware Resource Scheduling</a></strong>
-					(<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Shin17tsmc.pdf">pdf</a></em>)
-				      </td>
-				    </tr>
-				  </table>
-
-				  <table>
-				    <tr>
-				      <td>
-					<a href="http://icsa-conferences.org/2017/">
-					  <span class="conf">
-					    [ICSA 2017]
-					  </span>
-					</a><br />
-					<strong><a href="http://ieeexplore.ieee.org/document/7927986/">Continuous Analysis of Collaborative Design</a></strong>
-					(<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Bang17icsa.pdf">pdf</a></em>, <span class="award">Best Paper Award</span>)
-				      </td>
-				    </tr>
-				  </table>
-
+	    <div class="paper">
+	      <a href="http://icsa-conferences.org/2017/">
+		<span class="conf">
+		  [ICSA 2017]
+		</span>
+	      </a><br />
+	      <strong><a href="http://ieeexplore.ieee.org/document/7927986/">Continuous Analysis of Collaborative Design</a></strong>
+	      (<em><a href="http://people.cs.umass.edu/~brun/pubs/pubs/Bang17icsa.pdf">pdf</a></em>, <span class="award">Best Paper Award</span>)
+	    </div>
+	    
 				  <table>
 				    <tr>
 				      <td>
@@ -1021,15 +649,12 @@
 				  </tr>
 				</table>
 
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[OOPSLA 2012]</span><br />
-				      <strong><a href="http://www.cs.umass.edu/~emery/pubs/AutoMan-UMass-CS-TR-2012-013.pdf">AutoMan: A Platform for Integrating Human and Digital Computation</a></strong> <span class="award">(CACM Research Highlight)</span><br />
-				      <em>see <a href="http://www.automan-lang.org/">automan-lang.org</a></em>
-				    </td>
-				  </tr>
-				</table>
+				<div class="paper">
+				  <span class="conf">[OOPSLA 2012]</span><br />
+				  <a href="http://www.cs.umass.edu/~emery/pubs/AutoMan-UMass-CS-TR-2012-013.pdf">AutoMan: A Platform for Integrating Human and Digital Computation</a>
+				  <span class="award">(CACM Research Highlight)</span><br />
+				  <em>see <a href="http://www.automan-lang.org/">automan-lang.org</a></em>
+				</div>
 
 				<table>
 				  <tr>
@@ -1040,228 +665,44 @@
 				  </tr>
 				</table>
 
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[SOSP 2011]</span><br />
-				      <strong><a href="http://dl.acm.org/authorize?6599740"><span style="font-variant: small-caps;">Dthreads</span>: efficient deterministic multithreading</a></strong><br />
-				      <em>see <a href="http://www.dthreads.org/">dthreads.org</a></em>
-				    </td>
-				  </tr>
-				</table>
 
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[OOPSLA 2011]</span><br />
-				      <strong><a href="http://dl.acm.org/authorize?6594257"><span style="font-variant: small-caps;">Sheriff</span>: precise detection and automatic mitigation of false sharing</a></strong><br />
-				    </td>
-				  </tr>
-				</table>
+				<div class="paper">
+				  <span class="conf">[FAST 2007]</span><br />
+				  <a href="http://www.cs.umass.edu/~emery/pubs/TFS.pdf">TFS: a transparent file system for contributory storage</a>
+				  <span class="award">(Best Paper Award)</span><br />
+				  </div>
 
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[CCS 2010]</span><br />
-				      <strong><a href="http://dl.acm.org/authorize?394386">DieHarder: securing the heap</a></strong><br />
-				    </td>
-				  </tr>
-				</table>
+				<div class="paper">
+				  <span class="conf">[PLDI 2007]</span><br />
+				  <a href="http://dl.acm.org/authorize?986689">Exterminator: automatically correcting memory errors with high probability</a>
+				  <span class="award">(CACM Research Highlight)</span><br />
+				</div>
 
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[ECRTS 2009]</span><br />
-				      <strong><a href="http://www.cs.umass.edu/~emery/pubs/ecrts09.pdf">Using Randomized Caches in Real-Time Systems</a></strong><br />
-				    </td>
-				  </tr>
-				</table>
-
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[OOPSLA 2009]</span><br />
-				      <strong><a href="http://dl.acm.org/authorize?148827">Grace: safe multithreaded programming for C/C++</strong></a><br />
-				    </td>
-				  </tr>
-				</table>
-
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[PLDI 2009]</span><br />
-				      <strong><a href="http://dl.acm.org/authorize?185594">Efficiently and precisely locating memory leaks and bloat</a></strong><br />
-				    </td>
-				  </tr>
-				</table>
+				<div class="paper">
+				  <span class="conf">[PLDI 2006]</span><br />
+				  <a href="http://dl.acm.org/authorize?818704">DieHard: probabilistic memory safety for unsafe languages</a>
+				  <span class="award">(Most Influential Paper Award)</span>
+				</div>
 
 
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[OSDI 2008]</span><br />
-				      <strong><a href="http://www.cs.umass.edu/~emery/pubs/redline.pdf">Redline: first class support for interactivity in commodity operating systems</strong></a><br />
-				    </td>
-				  </tr>
-				</table>
+				<div class="paper">
+				  <span class="conf">[OOPSLA 2002]</span><br />
+				  <a href="http://dl.acm.org/authorize?34140">Reconsidering custom memory allocation</a> <span class="award">(Most Influential Paper Award)</span><br />
+				</div>
 
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[ASPLOS-XIII]</span><br />
-				      <strong><a href="http://dl.acm.org/authorize?058408">Archipelago: trading address space for reliability and security</a></strong><br />
-				    </td>
-				  </tr>
-				</table>
-
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[SenSys 2007]</span><br />
-				      <strong><a href="http://dl.acm.org/authorize?924175">Eon: a language and runtime system for perpetual systems</a></strong><br />
-				    </td>
-				  </tr>
-				</table>
-
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[FAST 2007]</span><br />
-				      <strong><a href="http://www.cs.umass.edu/~emery/pubs/TFS.pdf">TFS: a transparent file system for contributory storage</a></strong> <span class="award">(Best Paper Award)</span><br />
-				    </td>
-				  </tr>
-				</table>
-
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[PLDI 2007]</span><br />
-				      <strong><a href="http://dl.acm.org/authorize?986689">Exterminator: automatically correcting memory errors with high probability</a></strong> <span class="award">(CACM Research Highlight)</span><br />
-				    </td>
-				  </tr>
-				</table>
-
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[PLDI 2006]</span><br />
-				      <strong><a href="http://dl.acm.org/authorize?818704">DieHard: probabilistic memory safety for unsafe languages</a></strong> <span class="award">(Most Influential Paper Award)</span><br />
-				    </td>
-				  </tr>
-				</table>
-
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[OSDI 2006]</span><br />
-				      <strong><a href="http://www.cs.umass.edu/~emery/pubs/cramm.pdf">CRAMM: virtual memory support for garbage-collected applications</a></strong><br />
-				    </td>
-				  </tr>
-				</table>
-
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[USENIX 2006]</span><br />
-				      <strong><a href="http://www.cs.umass.edu/~emery/pubs/tmm-usenix06.pdf">Transparent contribution of memory</a></strong><br />
-				    </td>
-				  </tr>
-				</table>
-				
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[USENIX 2006]</span><br />
-				      <strong><a href="http://www.cs.umass.edu/~emery/pubs/flux-usenix06.pdf">Flux: a language for programming high-performance servers</a></strong><br />
-				    </td>
-				  </tr>
-				</table>
-				
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">
-					[OOPSLA 2005]
-				      </span><br />
-				      <strong><a href="http://dl.acm.org/authorize?874044">
-					  Quantifying the performance of garbage collection vs. explicit memory management</a></strong><br />
-				    </td>
-				  </tr>
-				</table>
-
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[PLDI 2005]</span><br />
-				      <strong><a href="http://dl.acm.org/authorize?861137">Garbage collection without paging</a></strong><br />
-				    </td>
-				  </tr>
-				</table>
-
-				<table>
-				  <tr>
-				    <td>
-				      <span class="conf">[OOPSLA 2002]</span><br />
-				      <strong><a href="http://dl.acm.org/authorize?34140">Reconsidering custom memory allocation</a> <span class="award">(Most Influential Paper Award)</span> </strong><br />
-				    </td>
-				  </tr>
-				</table>
-
-				<table>
-				  <tr>
-				    <td>
+				<div class="paper">
 				      <span class="conf">[PLDI 2001]</span><br />
-				      <strong><a href="http://dl.acm.org/authorize?675110">Composing high-performance memory allocators</a></strong><br />
+				      <a href="http://dl.acm.org/authorize?675110">Composing high-performance memory allocators</a><br />
 				      <em>see <a href="http://www.heaplayers.org/">HeapLayers.org</a></em>
 				    </td>
 				  </tr>
 				</table>
 
-				<table>
-				  <tr>
-				    <td valign="top">
-				      <span class="conf">[ASPLOS-IX]</span><br />
-				      <strong><a href="http://dl.acm.org/authorize?16188">Hoard: a scalable memory allocator for multithreaded applications</a></strong><br />
-				      <em>see <a href="http://www.hoard.org/">hoard.org</a></em> <span class="award">(Most Influential Paper Award)</span>
-				    </td>
-				  </tr>
-				</table>
-
-			      </td>
-			    </tr>
-
-			    <tr>
-			      <td valign="top"><br />
-				<span class="subheader">
-				  alumni
- 				</span>
-				<br />
-				<br />
-			      </td>
-			    </tr>
-			    <tr>
-
-			      <td>
-				<strong><a href="https://www.linkedin.com/in/justin-aquadro-4547561a/">Justin Aquadro</a></strong> (MS, MachineMetrics)<br />
-				<strong><a href="http://www.cs.williams.edu/~dbarowy/">Dan Barowy</a></strong> (PhD, Asst. Prof., Williams College)<br />
-				<strong><a href="http://www.cs.grinnell.edu/~curtsinger/">Charlie Curtsinger</a></strong> (PhD, Asst. Prof., Grinnell College)<br />
-				<strong>Yi (Eric) Feng</strong> (MS, at Google)<br />
-				<strong><a href=" https://www.cse.buffalo.edu/~mhertz/"> Matthew Hertz</a></strong> (PhD, Univ. of Buffalo)<br />
-				<strong><a href="https://www.linkedin.com/in/divya-krishnan-6b827115/">Divya Krishnan</a></strong> (MS, at Cisco Systems)<br />
-				<strong><a href="http://www.cs.utsa.edu/~tongpingliu/">Tongping Liu</a></strong> (PhD, Assistant Professor, UMass ECE)<br />
-				<strong><a href="https://www.linkedin.com/in/vitaliyl/">Vitaliy Lvin</a></a></strong> (MS, at Boston Dynamics)<br />
-			      <strong><a href="https://www.linkedin.com/in/gene-novark-183a4b20/">Gene Novark</a></strong> (PhD, at PDT Partners)<br />
-			      <strong><a href="https://www.linkedin.com/in/tedks/">Ted Smith</a></strong> (MS, Bloomberg LP)<br />
-			      <strong><a href="https://jvilk.com/">John Vilk</a></strong> (PhD, Stripe)<br />
-			      <strong><a href="https://www.linkedin.com/in/tingyang/">Ting Yang</a></strong> (PhD, at Facebook)<br />
-
-
-			    </td>
-			  </tr>
-
-			</tbody>
-		      </table> <br />
-
+				<div class="paper">
+				  <span class="conf">[ASPLOS-IX]</span><br />
+				  <a href="http://dl.acm.org/authorize?16188">Hoard: a scalable memory allocator for multithreaded applications</a><br />
+				  <em>see <a href="http://www.hoard.org/">hoard.org</a></em> <span class="award">(Most Influential Paper Award)</span>
+				</div>
 
 		      <hr class="accessibility" />
 		    </div>
