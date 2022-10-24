@@ -59,7 +59,7 @@ a:hover {
 basic layout 
 *****************/
 body {
-   background-color: #ccc;
+/*   background-color: #ccc; */
    color: #333;
    margin:1em;    /* gives some air for the pagewrapper */
 }
